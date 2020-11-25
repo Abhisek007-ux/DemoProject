@@ -1,0 +1,27 @@
+<div class="showChartData">
+<app-chart></app-chart>
+</div>
+<div>
+<kendo-grid
+[kendoGridBinding]="data"
+[pageSize]="10"
+[pageable]="true"
+
+
+[height]="510">
+<kendo-grid-checkbox-column field="" title="" showSelectAll="true" [width]="35"></kendo-grid-checkbox-column>
+<kendo-grid-column field="id" title="Id"></kendo-grid-column>
+<kendo-grid-column field="name"  title="Name"></kendo-grid-column>
+<kendo-grid-column field="registrationDate"  title="Registraton Date"></kendo-grid-column>
+<kendo-grid-column field="mailId" title="Email"></kendo-grid-column>
+<kendo-grid-column field="contactNumber" title="Contact"></kendo-grid-column>
+<kendo-grid-column  title="" [headerClass]="{'textCenterAlign': true}" width="100">
+
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <button class="gridColumnRemoveIcon"  (click)="deleteData(dataItem)">Delete</button>
+       
+    </ng-template>
+
+  </kendo-grid-column>
+  </kendo-grid>
+</div>

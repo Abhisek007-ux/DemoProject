@@ -1,0 +1,11 @@
+.showChartData{
+
+    height:350Px;
+    width:auto;
+}
+
+.gridColumnRemoveIcon {
+    width: 70px;
+    cursor: pointer;
+    height:50px;
+  }
